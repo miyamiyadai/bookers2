@@ -1,0 +1,18 @@
+<h3>User Info</h3>
+  <% if book.image.attached? %>
+    <%= image_tag book.image, size: "200x200" %>
+  <% else %>
+    <%= image_tag 'no_image', size: "200x200" %>
+  <% end %>
+
+<h3>New Book</h3>
+
+<%= form_with model: Book.new do |f| %>
+  <h6>Title</h6>
+  <%= f.text_field :title %>
+	
+  <h6>Opinion</h6>
+  <%= f.text_area :body %>
+	
+  <%= f.submit 'Create Book' %>
+<% end %>
