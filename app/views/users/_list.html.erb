@@ -1,0 +1,38 @@
+<div class="col-md-3">
+<div>  
+  <%= flash[:notice] %>
+</div>
+<h3>User Info</h3>
+
+  <table>
+    <tr>
+    <th><%= image_tag @user.get_profile_image(200,200) %></th>
+    </tr>
+    
+    <tr>
+    <th>name :<%= @user.name %></th>
+    </tr>
+    
+    <tr>
+    <th>introduction :<%= @user.introduction %></th>
+    </tr>
+    
+    <tr>
+    <th><%= link_to edit_user_path(@user) do %>
+    <i class="fas fa-user-cog"></i>
+    <% end %></th>
+    </tr>
+  </table>
+  
+<h3>New Book</h3>
+
+<%= form_with model: Book.new do |f| %>
+  <h6>Title</h6>
+  <%= f.text_field :title %>
+	
+  <h6>Opinion</h6>
+  <%= f.text_area :body %>
+	
+  <p><%= f.submit 'Create Book' %></p>
+<% end %>
+</div>

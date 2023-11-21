@@ -1,2 +1,30 @@
-<h1>Show#edit</h1>
-<p>Find me in app/views/show/edit.html.erb</p>
+<% if @user.errors.any? %>
+  <%= @user.errors.count %> error occured
+  <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h2>Usre Info</h2>
+<%= form_with model: @user do |f| %>
+  <p>
+    <label for="inputName">Name</label>
+  </p>
+  <%= f.text_field :name, autofocus: true, id:"inputName"%>
+  
+  <p>
+    <label for="inputImage">Image</label>
+  </p>
+  <%= f.file_field :profile_image, placeholder: "プロフィール画像", accept: "image/*" %>  
+    
+  <p>
+    <label for="inputIntroduction">Introduction</label>
+  </p>
+  <%= f.text_field :introduction, autofocus: true, id:"inputIntroduction"%>
+  
+  <p>      
+  <%= f.submit "Updete User" %>
+  </p>
+<% end %>
