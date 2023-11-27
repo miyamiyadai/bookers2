@@ -4,12 +4,17 @@
 
 
 <div class="col-md-8 offset-md-1">
-<h2>Book Detail</h2>  
+<h2>Book detail</h2>  
 <table class="table">
 
 <tbody>
 <tr>
-  <td><%= image_tag @user.get_profile_image(200,200) %></td>
+  <td><%= link_to user_path(@user.id) do %>
+    <%= image_tag @user.get_profile_image(200,200) %>
+    <br>
+    <%= @user.name %>
+    <% end %>
+    </td>
   <td><%= @book.title %></td>
   <td><%= @book.body %></td>
   <td>
@@ -26,4 +31,3 @@
 </div>
 </div>
 </div>
-    

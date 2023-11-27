@@ -29,28 +29,28 @@
             <ul class="navbar-nav ml-auto">
            
             <% if user_signed_in? %>
-            <%= link_to "Home", user_path(current_user.id), class: 'nav-link text-white fas fa-house' %>
+            <%= link_to "Home", user_path(current_user.id), class: 'nav-link text-white fas fa-house fa-solid' %>
             
-            <%= link_to "Users", users_path, class: 'nav-link text-white fas fa-house' %>
+            <%= link_to "Users", users_path, class: 'nav-link text-white fas fa-users fa-solid' %>
             
-            <%= link_to "Books", books_path, class: 'nav-link text-white fas far-book' %>
+            <%= link_to "Books", books_path, class: 'nav-link text-white fas fa-book-open fa-solid' %>
             
             
             <li class="nav-item">
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'nav-link text-white fas fa-right-from-bracket' %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'nav-link text-white fas fa-right-from-bracket fa-solid' %>
             </li>
             <% else %>
             <li class="nav-item">
-             <%= link_to "Home", root_path, class: 'nav-link text-white fas fa-house' %>
+             <%= link_to "Home", root_path, class: 'nav-link text-white fas fa-house fa-solid' %>
             </li>
             <li class="nav-item">
-            <%= link_to "About", about_path, class: 'nav-link text-white fas fa-link' %>
+            <%= link_to "About", about_path, class: 'nav-link text-white fas fa-link fa-solid' %>
             </li>
             <li class="nav-item">
-              <%= link_to "Sign up", new_user_registration_path, class: 'nav-link text-white fas fa-user-plus' %>
+              <%= link_to "Sign up", new_user_registration_path, class: 'nav-link text-white fas fa-user-plus fa-solid' %>
             </li>
             <li class="nav-item">
-              <%= link_to "Log in", new_user_session_path, class: 'nav-link text-white fas fa-right-to-bracket' %>
+              <%= link_to "Log in", new_user_session_path, class: 'nav-link text-white fas fa-right-to-bracket fa-solid' %>
             </li>
             <% end %>
             </ul>
