@@ -1,24 +1,28 @@
-# README
+# 日々交々
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+​
+## サイト概要
+### サイトテーマ
+日常の些細な出来事など、身の回りの出来事を投稿して共有するコミュニティサイト。
 
-Things you may want to cover:
+### テーマを選んだ理由
+SNSなどの需要が目覚ましく向上している今だからこその、日常で起こった小さな出来事などを気軽に投稿して他ユーザーと共有できるサイトを作れればと思いました。
 
-* Ruby version
+### ターゲットユーザ
+- 日常の出来事をぜひいろんな人に知ってほしいと思っている人。
+​
+### 主な利用シーン
+- 普段の生活で何かあった際、それを誰かと共有したい時に 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 設計書
+後ほど作成
+​
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
+​
+## 使用素材
+- 

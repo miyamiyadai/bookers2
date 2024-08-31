@@ -24,33 +24,30 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             
-            <%= link_to "Bookers", root_path,class: 'navbar-brand text-white'  %>
+            <%= link_to "日々交々", root_path,class: 'navbar-brand text-white'  %>
             
             <ul class="navbar-nav ml-auto">
            
             <% if user_signed_in? %>
-            <%= link_to "Home", user_path(current_user.id), class: 'nav-link text-white fas fa-house fa-solid' %>
+            <%= link_to "ホーム", user_path(current_user.id), class: 'nav-link text-white fas fa-house fa-solid' %>
             
-            <%= link_to "Users", users_path, class: 'nav-link text-white fas fa-users fa-solid' %>
+            <%= link_to "ユーザー", users_path, class: 'nav-link text-white fas fa-users fa-solid' %>
             
-            <%= link_to "Books", books_path, class: 'nav-link text-white fas fa-book-open fa-solid' %>
+            <%= link_to "投稿", books_path, class: 'nav-link text-white fas fa-book-open fa-solid' %>
             
             
             <li class="nav-item">
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'nav-link text-white fas fa-right-from-bracket fa-solid' %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav-link text-white fas fa-right-from-bracket fa-solid' %>
             </li>
             <% else %>
             <li class="nav-item">
-             <%= link_to "Home", root_path, class: 'nav-link text-white fas fa-house fa-solid' %>
+             <%= link_to "ホーム", root_path, class: 'nav-link text-white fas fa-house fa-solid' %>
             </li>
             <li class="nav-item">
-            <%= link_to "About", about_path, class: 'nav-link text-white fas fa-link fa-solid' %>
+              <%= link_to "新規登録", new_user_registration_path, class: 'nav-link text-white fas fa-user-plus fa-solid' %>
             </li>
             <li class="nav-item">
-              <%= link_to "Sign up", new_user_registration_path, class: 'nav-link text-white fas fa-user-plus fa-solid' %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Log in", new_user_session_path, class: 'nav-link text-white fas fa-right-to-bracket fa-solid' %>
+              <%= link_to "ログイン", new_user_session_path, class: 'nav-link text-white fas fa-right-to-bracket fa-solid' %>
             </li>
             <% end %>
             </ul>
